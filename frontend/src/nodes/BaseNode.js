@@ -13,7 +13,7 @@ export default function BaseNode({
         borderRadius: 8,
         padding: 10,
         minWidth: 200,
-        background: "#fff",
+        // background: "#fff",
       }}
     >
       {/* Node Title */}

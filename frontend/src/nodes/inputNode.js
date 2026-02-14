@@ -24,14 +24,42 @@ export const InputNode = ({ id, data }) => {
 
   return (
     <BaseNode title="Input" outputs={[`${id}-value`]}>
-      <div>
-        <label>
+      <div
+      // style={{
+      //   display: "flex",
+      //   flexDirection: "column",
+      //   gap: "5px",
+      // }}
+      >
+        <label
+          style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+        >
           Name:
-          <input type="text" value={currName} onChange={handleNameChange} />
+          <input
+            type="text"
+            value={currName}
+            onChange={handleNameChange}
+            // style={{
+            //   outline: "none",
+            //   border: "2px solid #ccc",
+            //   borderRadius: 5,
+            //   padding: 3,
+            // }}
+          />
         </label>
-        <label>
+        <label
+          style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+        >
           Type:
-          <select value={inputType} onChange={handleTypeChange}>
+          <select
+            value={inputType}
+            onChange={handleTypeChange}
+            // style={{
+            //   outline: "none",
+            //   border: "2px solid #ccc",
+            //   borderRadius: 5,
+            // }}
+          >
             <option value="Text">Text</option>
             <option value="File">File</option>
           </select>
