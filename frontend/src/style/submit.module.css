@@ -1,26 +1,26 @@
-.submitContainer{
+.submitContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* Removed margins as flex parent handles layout */
 }
-.submitButton{
-    background: linear-gradient(145deg, #000000 0%, #717171 100%);
+
+.submitButton {
+    background: linear-gradient(145deg, #64748b 0%, #475569 100%); /* Slate-500 to Slate-600 */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Slightly richer radius */
     cursor: pointer;
     font-size: 16px;
-    font-weight: 500;
-    padding: 10px 20px;
+    font-weight: 600; /* Matching branding weight */
+    padding: 12px 24px; /* Slightly larger click area */
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(71, 85, 105, 0.2); /* Colored shadow */
 }
 
 .submitButton:hover {
-    background: linear-gradient(145deg, #333333 0%, #000000 100%);
+    background: linear-gradient(145deg, #475569 0%, #334155 100%); /* Slate-600 to Slate-700 */
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 8px -1px rgba(71, 85, 105, 0.3);
 }
 

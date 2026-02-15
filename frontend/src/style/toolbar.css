@@ -1,26 +1,22 @@
 /* Toolbar container */
 .pipeline-toolbar {
-  padding: 10px;
-
-  /* background-color: red; */
-
+  padding: 15px 20px;
   width: 100%;
-
-  overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
-
+  background-color: #ffffff;
+  /* border-bottom: 1px solid #e2e8f0; moved to App header but good to keep clean here too */
 }
 
 /* Node list container */
 .toolbar-nodes {
-  padding-top: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
 }
 
 

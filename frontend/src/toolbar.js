@@ -6,6 +6,18 @@ import "./style/toolbar.css";
 export const PipelineToolbar = () => {
   return (
     <div className="pipeline-toolbar">
+      <div style={{ marginRight: 20 }}>
+        <h2
+          style={{
+            margin: 0,
+            fontSize: "1.2rem",
+            fontWeight: "600",
+            color: "#334155",
+          }}
+        >
+          Pipeline Builder
+        </h2>
+      </div>
       <div className="toolbar-nodes">
         <DraggableNode type="customInput" label="Input" />
         <DraggableNode type="llm" label="LLM" />

@@ -102,7 +102,7 @@ export const PipelineUI = () => {
 
   return (
     <>
-      <div ref={reactFlowWrapper} style={{ width: "100wv", height: "70vh" }}>
+      <div ref={reactFlowWrapper} style={{ width: "100%", height: "100%" }}>
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -117,9 +117,9 @@ export const PipelineUI = () => {
           snapGrid={[gridSize, gridSize]}
           connectionLineType="smoothstep"
         >
-          <Background color="#aaa" gap={gridSize} />
+          <Background color="#cbd5e1" gap={gridSize} />
           <Controls />
-          <MiniMap />
+          <MiniMap style={{ height: 120 }} zoomable pannable />
         </ReactFlow>
       </div>
     </>

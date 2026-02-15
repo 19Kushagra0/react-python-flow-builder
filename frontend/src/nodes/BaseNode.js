@@ -19,15 +19,14 @@ export default function BaseNode({
         minWidth: 200,
         background: "#fff",
         opacity: 0.9,
-        cursor: "default", // Override draggable cursor
-        display: "block", // Override flex center from draggableNode
-        height: "auto", // Override fixed height
+        cursor: "default",
+        display: "block",
+        height: "auto",
+        transition: "all 0.2s ease", // Smooth transition for hover effects
       }}
     >
-      {/* Node Title */}
       <strong>{title}</strong>
 
-      {/* Input Handles (Left) */}
       {inputs.map((input, index) => (
         <Handle
           key={input}
@@ -38,10 +37,8 @@ export default function BaseNode({
         />
       ))}
 
-      {/* Node Content */}
       <div style={{ marginTop: 10 }}>{children}</div>
 
-      {/* Output Handles (Right) */}
       {outputs.map((output, index) => (
         <Handle
           key={output}
