@@ -1,4 +1,3 @@
-// DelayNode.js
 import { useState, useEffect } from "react";
 import BaseNode from "./BaseNode";
 import styles from "../style/nodes.module.css";
@@ -12,7 +11,7 @@ export const DelayNode = ({ id, data }) => {
     }, delay);
 
     return () => clearTimeout(timer);
-  }, [data.input, delay]);
+  }, [data, delay]);
 
   return (
     <BaseNode
