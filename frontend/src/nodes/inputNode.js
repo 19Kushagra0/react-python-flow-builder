@@ -1,4 +1,5 @@
 // inputNode.js
+import styles from "../style/nodes.module.css";
 
 import { useState } from "react";
 
@@ -24,41 +25,22 @@ export const InputNode = ({ id, data }) => {
 
   return (
     <BaseNode title="Input" outputs={[`${id}-value`]}>
-      <div
-      // style={{
-      //   display: "flex",
-      //   flexDirection: "column",
-      //   gap: "5px",
-      // }}
-      >
-        <label
-          style={{ display: "flex", flexDirection: "column", gap: "10px" }}
-        >
-          Name:
+      <div className={styles.nodeContent}>
+        <label className={styles.nodeLabel}>
+          <span>Name:</span>
           <input
             type="text"
             value={currName}
             onChange={handleNameChange}
-            // style={{
-            //   outline: "none",
-            //   border: "2px solid #ccc",
-            //   borderRadius: 5,
-            //   padding: 3,
-            // }}
+            className={styles.nodeInput}
           />
         </label>
-        <label
-          style={{ display: "flex", flexDirection: "column", gap: "10px" }}
-        >
-          Type:
+        <label className={styles.nodeLabel}>
+          <span>Type:</span>
           <select
             value={inputType}
             onChange={handleTypeChange}
-            // style={{
-            //   outline: "none",
-            //   border: "2px solid #ccc",
-            //   borderRadius: 5,
-            // }}
+            className={styles.nodeInput}
           >
             <option value="Text">Text</option>
             <option value="File">File</option>

@@ -1,5 +1,5 @@
 // llmNode.js
-
+import styles from "../style/nodes.module.css";
 import BaseNode from "./BaseNode";
 
 export const LLMNode = ({ id, data }) => {
@@ -9,8 +9,8 @@ export const LLMNode = ({ id, data }) => {
       inputs={[`${id}-system`, `${id}-prompt`]}
       outputs={[`${id}-response`]}
     >
-      <div>
-        <span>This is a LLM.</span>
+      <div className={styles.nodeContent}>
+        <span className={styles.nodeDescription}>This is a LLM.</span>
       </div>
     </BaseNode>
   );

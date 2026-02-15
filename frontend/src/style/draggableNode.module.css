@@ -1,0 +1,48 @@
+/* Base draggable node – pencil look */
+.draggableNode {
+  cursor: grab;
+  min-width: 110px;   /* wider */
+  height: 68px;       /* taller */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px; /* slightly rounder */
+  border: 1px dashed #bdbdbd;
+
+  background-color: #fafafa;
+  color: #4c5464;
+
+  font-size: 16px;    
+
+  transition: background-color 0.12s ease, transform 0.12s ease;
+
+}
+
+/* Light hover */
+.draggableNode:hover {
+  background-color: #ededed;
+  transform: translateY(-1px);
+  font-weight: 500;
+
+}
+
+/* Label */
+.draggableNodeLabel {
+  pointer-events: none;
+}
+
+/* Keep all node types same (wireframe style) */
+.customInput,
+.llm,
+.customOutput,
+.text,
+.constant,
+.concat,
+.uppercase,
+.delay,
+.condition {
+  background-color: #fafafa;
+  border-color: #bdbdbd;
+}

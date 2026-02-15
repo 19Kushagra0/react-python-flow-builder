@@ -1,0 +1,17 @@
+/* Toolbar container */
+.pipeline-toolbar {
+  width: fit-content;
+  padding: 10px;
+  padding-left: 25px;
+}
+
+/* Node list container */
+.toolbar-nodes {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+

@@ -1,7 +1,7 @@
 // submit.js
 
 import { useStore } from "./store";
-
+import styles from "./style/submit.module.css";
 export const SubmitButton = () => {
   const { nodes, edges } = useStore();
 
@@ -29,7 +29,13 @@ export const SubmitButton = () => {
     }
   };
 
-  return <button onClick={handleSubmit}>Submit</button>;
+  return (
+    <div className={styles.submitContainer}>
+      <button onClick={handleSubmit} className={styles.submitButton}>
+        Submit
+      </button>
+    </div>
+  );
 };
 
 // export const SubmitButton = () => {

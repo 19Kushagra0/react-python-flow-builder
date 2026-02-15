@@ -1,11 +1,13 @@
 // outputNode.js
 
-import { useState } from 'react';
-import BaseNode from './BaseNode';
-
+import { useState } from "react";
+import BaseNode from "./BaseNode";
+import styles from "../style/nodes.module.css";
 export const OutputNode = ({ id, data }) => {
-  const [currName, setCurrName] = useState(data?.outputName || id.replace('customOutput-', 'output_'));
-  const [outputType, setOutputType] = useState(data.outputType || 'Text');
+  const [currName, setCurrName] = useState(
+    data?.outputName || id.replace("customOutput-", "output_"),
+  );
+  const [outputType, setOutputType] = useState(data.outputType || "Text");
 
   const handleNameChange = (e) => {
     setCurrName(e.target.value);
@@ -17,21 +19,23 @@ export const OutputNode = ({ id, data }) => {
 
   return (
     <BaseNode title="Output" inputs={[`${id}-value`]}>
-  
-      
-    
-      <div>
-        <label>
-          Name:
-          <input 
-            type="text" 
-            value={currName} 
-            onChange={handleNameChange} 
+      <div className={styles.nodeContent}>
+        <label className={styles.nodeLabel}>
+          <span>Name:</span>
+          <input
+            className={styles.nodeInput}
+            type="text"
+            value={currName}
+            onChange={handleNameChange}
           />
         </label>
-        <label>
-          Type:
-          <select value={outputType} onChange={handleTypeChange}>
+        <label className={styles.nodeLabel}>
+          <span>Type:</span>
+          <select
+            className={styles.nodeInput}
+            value={outputType}
+            onChange={handleTypeChange}
+          >
             <option value="Text">Text</option>
             <option value="File">Image</option>
           </select>
@@ -39,4 +43,4 @@ export const OutputNode = ({ id, data }) => {
       </div>
     </BaseNode>
   );
-}
+};

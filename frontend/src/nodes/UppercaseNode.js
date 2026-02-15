@@ -1,5 +1,6 @@
 // UppercaseNode.js
 import BaseNode from "./BaseNode";
+import styles from "../style/nodes.module.css";
 
 export const UppercaseNode = ({ id, data }) => {
   const input = data.input || "";
@@ -9,11 +10,12 @@ export const UppercaseNode = ({ id, data }) => {
 
   return (
     <BaseNode
+      className={styles.nodeContent}
       title="Uppercase"
       inputs={[`${id}-input`]}
       outputs={[`${id}-output`]}
     >
-      <div>Converts text to UPPERCASE</div>
+      <span className={styles.nodeDescription}>Converts text to UPPERCASE</span>
     </BaseNode>
   );
 };

@@ -1,0 +1,29 @@
+.nodeContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+
+}
+.nodeLabel{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.nodeLabel span{
+    font-size: 12px;
+    font-weight: 500;
+}
+.nodeInput{
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    width: 90%;
+
+}
+.nodeDescription{
+    font-size: 14px;
+    font-weight: 500;
+    color: #4c5464;
+}
