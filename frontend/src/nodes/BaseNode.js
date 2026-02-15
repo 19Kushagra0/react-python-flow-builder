@@ -1,19 +1,27 @@
 import { Handle, Position } from "reactflow";
+import draggableStyles from "../style/draggableNode.module.css";
 
 export default function BaseNode({
   title,
   inputs = [],
   outputs = [],
   children,
+  type = "",
 }) {
   return (
     <div
+      className={`${draggableStyles.draggableNode} ${draggableStyles[type] || ""} ${type}`}
       style={{
-        border: "1px solid #ccc",
+        borderStyle: "solid",
+        borderWidth: "1px",
         borderRadius: 8,
         padding: 10,
         minWidth: 200,
-        // background: "#fff",
+        background: "#fff",
+        opacity: 0.9,
+        cursor: "default", // Override draggable cursor
+        display: "block", // Override flex center from draggableNode
+        height: "auto", // Override fixed height
       }}
     >
       {/* Node Title */}

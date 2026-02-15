@@ -4,7 +4,11 @@ import { SubmitButton } from "./submit";
 
 function App() {
   return (
-    <div>
+    <div
+      style={{
+        overflow: "hidden",
+      }}
+    >
       <PipelineToolbar />
       <PipelineUI />
       <SubmitButton />

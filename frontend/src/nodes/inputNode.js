@@ -24,7 +24,7 @@ export const InputNode = ({ id, data }) => {
   console.log("data", data);
 
   return (
-    <BaseNode title="Input" outputs={[`${id}-value`]}>
+    <BaseNode title="Input" outputs={[`${id}-value`]} type="customInput">
       <div className={styles.nodeContent}>
         <label className={styles.nodeLabel}>
           <span>Name:</span>

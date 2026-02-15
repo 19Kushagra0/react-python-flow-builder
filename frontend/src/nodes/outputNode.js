@@ -18,7 +18,7 @@ export const OutputNode = ({ id, data }) => {
   };
 
   return (
-    <BaseNode title="Output" inputs={[`${id}-value`]}>
+    <BaseNode title="Output" inputs={[`${id}-value`]} type="customOutput">
       <div className={styles.nodeContent}>
         <label className={styles.nodeLabel}>
           <span>Name:</span>

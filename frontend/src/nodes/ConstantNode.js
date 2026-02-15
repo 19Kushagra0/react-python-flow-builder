@@ -13,6 +13,7 @@ export const ConstantNode = ({ id, data }) => {
       className={styles.nodeContent}
       title="Constant"
       outputs={[`${id}-output`]}
+      type="constant"
     >
       <input
         className={styles.nodeInput}

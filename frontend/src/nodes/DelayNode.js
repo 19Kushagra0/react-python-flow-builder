@@ -19,6 +19,7 @@ export const DelayNode = ({ id, data }) => {
       title="Delay"
       inputs={[`${id}-input`]}
       outputs={[`${id}-output`]}
+      type="delay"
     >
       <label className={styles.nodeLabel}>
         <span> Delay (ms):</span>

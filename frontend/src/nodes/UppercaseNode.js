@@ -14,6 +14,7 @@ export const UppercaseNode = ({ id, data }) => {
       title="Uppercase"
       inputs={[`${id}-input`]}
       outputs={[`${id}-output`]}
+      type="uppercase"
     >
       <span className={styles.nodeDescription}>Converts text to UPPERCASE</span>
     </BaseNode>

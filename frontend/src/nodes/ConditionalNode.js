@@ -14,6 +14,7 @@ export const ConditionalNode = ({ id, data }) => {
       title="Condition"
       inputs={[`${id}-input`]}
       outputs={[`${id}-true`, `${id}-false`]}
+      type="condition"
     >
       <span className={styles.nodeDescription}>
         Routes output based on condition

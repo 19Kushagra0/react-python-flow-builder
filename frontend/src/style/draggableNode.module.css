@@ -1,31 +1,42 @@
-/* Base draggable node – pencil look */
+/* Base draggable node – modern gradient look */
 .draggableNode {
   cursor: grab;
-  min-width: 110px;   /* wider */
-  height: 68px;       /* taller */
+  min-width: 110px;
+  height: 68px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 8px; /* slightly rounder */
-  border: 1px dashed #bdbdbd;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
 
-  background-color: #fafafa;
-  color: #4c5464;
+  /* Soft, minimal gradient (White -> Light Cool Gray) */
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  color: #475569;
 
-  font-size: 16px;    
+  font-size: 16px;
+  font-weight: 500;
 
-  transition: background-color 0.12s ease, transform 0.12s ease;
+  /* Subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+
+  transition: all 0.2s ease;
+
+  /* border: 1px dashed ;
+  border: dashed; */
 
 }
 
-/* Light hover */
+/* Hover state – enhanced gradient and lift */
 .draggableNode:hover {
-  background-color: #ededed;
-  transform: translateY(-1px);
-  font-weight: 500;
-
+  /* Slightly more defined gradient on hover */
+  background: linear-gradient(145deg, #f8fafc 0%, #eff6ff 100%);
+  border-color: #cbd5e1;
+  color: #1e293b;
+  
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
 }
 
 /* Label */
@@ -33,16 +44,59 @@
   pointer-events: none;
 }
 
-/* Keep all node types same (wireframe style) */
+/* --- Specific Node Themes (Ultra-Subtle Gradients) --- */
+
+/* Inputs & Constants: Very Soft Blue */
 .customInput,
-.llm,
-.customOutput,
-.text,
-.constant,
-.concat,
-.uppercase,
-.delay,
-.condition {
-  background-color: #fafafa;
-  border-color: #bdbdbd;
+.constant {
+  /* background: linear-gradient(145deg, #ffffff 0%, #eff6ff 100%); */
+  border-color: #dbeafe;
+
+  color: #1e3a8a;
 }
+
+.customOutput {
+  /* background: linear-gradient(145deg, #ffffff 0%, #f0fdf4 100%); */
+  border-color: #dcfce7;
+  color: #14532d;
+}
+
+.llm {
+  /* background: linear-gradient(145deg, #ffffff 0%, #faf5ff 100%); */
+  border-color: #f3e8ff;
+  color: #581c87;
+}
+
+.text {
+  /* background: linear-gradient(145deg, #ffffff 0%, #eef2ff 100%); */
+  border-color: #e0e7ff;
+  color: #312e81;
+}
+
+.condition {
+  /* background: linear-gradient(145deg, #ffffff 0%, #fffbeb 100%); */
+  border-color: #fef3c7;
+  color: #78350f;
+}
+
+.delay {
+  /* background: linear-gradient(145deg, #ffffff 0%, #f0fdfa 100%); */
+  border-color: #ccfbf1;
+  color: #134e4a;
+}
+
+.concat,
+.uppercase {
+  /* background: linear-gradient(145deg, #ffffff 0%, #fff1f2 100%); */
+  border-color: #ffe4e6;
+  color: #881337;
+}
+
+/* Hover effects: slightly more visible tint */
+.customInput:hover, .constant:hover { background: linear-gradient(145deg, #eff6ff 0%, #dbeafe 100%); border-color: #bfdbfe; }
+.customOutput:hover { background: linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%); border-color: #bbf7d0; }
+.llm:hover { background: linear-gradient(145deg, #faf5ff 0%, #f3e8ff 100%); border-color: #e9d5ff; }
+.text:hover { background: linear-gradient(145deg, #eef2ff 0%, #e0e7ff 100%); border-color: #c7d2fe; }
+.condition:hover { background: linear-gradient(145deg, #fffbeb 0%, #fef3c7 100%); border-color: #fde68a; }
+.delay:hover { background: linear-gradient(145deg, #f0fdfa 0%, #ccfbf1 100%); border-color: #99f6e4; }
+.concat:hover, .uppercase:hover { background: linear-gradient(145deg, #fff1f2 0%, #ffe4e6 100%); border-color: #fecdd3; }

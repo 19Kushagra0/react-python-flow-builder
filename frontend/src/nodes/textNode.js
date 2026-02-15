@@ -7,14 +7,16 @@ export const TextNode = ({ id, data }) => {
   const updateNodeInternals = useUpdateNodeInternals();
 
   const matches = currText.match(/{{\s*([\w]+)\s*}}/g);
-
-  const inputs = matches
-    ? [...new Set(matches)].map((m) => `${id}-${m.replace(/{{|}}|\s/g, "")}`)
-    : [];
+  const cleaned = matches.map((el) => {
+    let erase = el.replace("{{", "");
+    erase = erase.replace("}}", "");
+    return erase;
+  });
+  const inputs = [...new Set(cleaned)];
 
   useEffect(() => {
     updateNodeInternals(id);
-  }, [currText, id, updateNodeInternals]);
+  }, [inputs, id, updateNodeInternals]);
 
   const handleTextChange = (e) => {
     setCurrText(e.target.value);
@@ -24,7 +26,12 @@ export const TextNode = ({ id, data }) => {
   };
 
   return (
-    <BaseNode inputs={inputs} outputs={[`${id}-output`]} title="Text">
+    <BaseNode
+      inputs={inputs}
+      outputs={[`${id}-output`]}
+      title="Text"
+      type="text"
+    >
       <div className={styles.nodeContent}>
         <label className={styles.nodeLabel}>
           <span>Text:</span>

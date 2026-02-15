@@ -1,13 +1,22 @@
 /* Toolbar container */
 .pipeline-toolbar {
-  width: fit-content;
   padding: 10px;
-  padding-left: 25px;
+
+  /* background-color: red; */
+
+  width: 100%;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
 }
 
 /* Node list container */
 .toolbar-nodes {
-  margin-top: 20px;
+  padding-top: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

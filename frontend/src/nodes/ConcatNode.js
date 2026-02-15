@@ -14,6 +14,7 @@ export const ConcatNode = ({ id, data }) => {
       title="Concat"
       inputs={[`${id}-a`, `${id}-b`]}
       outputs={[`${id}-output`]}
+      type="concat"
     >
       <span className={styles.nodeDescription}>Concatenates two inputs</span>
     </BaseNode>

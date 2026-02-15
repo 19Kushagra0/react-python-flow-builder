@@ -1,6 +1,7 @@
 // draggableNode.js
 
 import styles from "./style/draggableNode.module.css";
+
 export const DraggableNode = ({ type, label }) => {
   const onDragStart = (event, nodeType) => {
     const appData = { nodeType };
@@ -14,12 +15,13 @@ export const DraggableNode = ({ type, label }) => {
 
   return (
     <div
-      className={`${styles.draggableNode} ${type}`}
+      className={`${styles.draggableNode} ${styles[type]}`}
       onDragStart={(event) => onDragStart(event, type)}
       onDragEnd={(event) => (event.target.style.cursor = "grab")}
       draggable
     >
       <span className={styles.draggableNodeLabel}>{label}</span>
+      {/* Remove inline styles if present, let CSS handle it */}
     </div>
   );
 };
