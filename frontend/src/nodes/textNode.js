@@ -3,10 +3,10 @@ import { useUpdateNodeInternals } from "reactflow";
 import BaseNode from "./BaseNode";
 import styles from "../style/nodes.module.css";
 export const TextNode = ({ id, data }) => {
-  const [currText, setCurrText] = useState(data?.text || "{{input}}");
+  const [currText, setCurrText] = useState("{{input}}");
   const updateNodeInternals = useUpdateNodeInternals();
 
-  const matches = currText.match(/{{\s*([\w]+)\s*}}/g);
+  const matches = currText.match(/{{\s*([\w]+)\s*}}/g) || [];
   const cleaned = matches.map((el) => {
     let erase = el.replace("{{", "");
     erase = erase.replace("}}", "");

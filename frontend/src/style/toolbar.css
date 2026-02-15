@@ -2,6 +2,7 @@
 .pipeline-toolbar {
   padding: 15px 20px;
   width: 100%;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
